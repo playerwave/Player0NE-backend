@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       unique: true,
+      min: 8,
+    },
+    profileimage: {
+      type: String,
+      // default: "default_profile_image_url.jp", // URL ของรูปภาพโปรไฟล์เริ่มต้น
     },
     token: {
       type: String,
